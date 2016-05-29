@@ -1,0 +1,140 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.anurag23.userdata.UserActivity">
+
+    <include layout="@layout/main_toolbar"
+        android:id="@+id/second_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/dark_primary_color"
+        android:paddingLeft="@dimen/activity_vertical_margin">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username: "
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:layout_marginRight="5dp"/>
+
+    <TextView
+        android:id="@+id/user_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="username"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        />
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="E-mail:"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@color/primary_color"/>
+
+        <TextView
+            android:id="@+id/user_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="example@example.com"
+            android:textSize="20dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/secondary_color"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Address:"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@color/primary_color"/>
+
+        <TextView
+            android:id="@+id/user_a_street"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Street"
+            android:textSize="20dp"
+            android:textColor="@color/secondary_color"/>
+        <TextView
+            android:id="@+id/user_a_suite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Suite"
+            android:textSize="20dp"
+            android:textColor="@color/secondary_color"/>
+        <TextView
+            android:id="@+id/user_a_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="City"
+            android:textSize="20dp"
+            android:textColor="@color/secondary_color"/>
+        <TextView
+            android:id="@+id/user_a_zip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Zipcode"
+            android:textSize="20dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/secondary_color"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone:"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@color/primary_color"/>
+
+        <TextView
+            android:id="@+id/user_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1010101010"
+            android:textSize="20dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/secondary_color"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Website:"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@color/primary_color"/>
+
+        <TextView
+            android:id="@+id/user_website"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="www.example.com"
+            android:textSize="20dp"
+            android:textColor="@color/secondary_color"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
