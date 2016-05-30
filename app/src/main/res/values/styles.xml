@@ -5,4 +5,12 @@
         <!-- Customize your theme here. -->
     </style>
 
+
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Dark">
+
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColorSecondary">#FFFFFF</item>
+
+    </style>
+
 </resources>

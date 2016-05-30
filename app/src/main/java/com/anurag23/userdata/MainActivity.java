@@ -149,6 +149,7 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.menu_item:{
                 new JSONTask().execute("http://jsonplaceholder.typicode.com/users");
+                return true;
             }
         }
 

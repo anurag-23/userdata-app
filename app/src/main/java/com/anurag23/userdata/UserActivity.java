@@ -1,5 +1,6 @@
 package com.anurag23.userdata;
 
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -19,6 +20,7 @@ public class UserActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar)findViewById(R.id.second_toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(getIntent().getStringExtra("name"));
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         TextView username = (TextView)findViewById(R.id.user_username);
         TextView email = (TextView)findViewById(R.id.user_email);
@@ -41,5 +43,16 @@ public class UserActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
 
+        switch(item.getItemId()){
+            case android.R.id.home: {
+                this.finish();
+                return true;
+            }
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 }
