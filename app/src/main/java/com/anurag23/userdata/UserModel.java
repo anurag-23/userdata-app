@@ -3,11 +3,11 @@ package com.anurag23.userdata;
 /**
  * Created by anurag on 28/5/16.
  */
-public class CustomModel {
+public class UserModel {
 
     private String name, userName, email, aStreet, aSuite, aCity, aZip, phone, website;
 
-    public CustomModel() {
+    public UserModel() {
     }
 
     public String getName() {

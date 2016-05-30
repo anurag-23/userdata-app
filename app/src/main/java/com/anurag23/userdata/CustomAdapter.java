@@ -3,7 +3,6 @@ package com.anurag23.userdata;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,12 +15,12 @@ import java.util.List;
  */
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.UserViewHolder> {
 
-    private List<CustomModel> list;
+    private List<UserModel> list;
     private LayoutInflater inflater;
     private Context context;
 
 
-    public CustomAdapter(Context context, List<CustomModel> list){
+    public CustomAdapter(Context context, List<UserModel> list){
         inflater = LayoutInflater.from(context);
         this.list = list;
         this.context = context;
@@ -40,7 +39,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.UserViewHo
     @Override
     public void onBindViewHolder(UserViewHolder holder, int position) {
 
-        CustomModel model = list.get(position);
+        UserModel model = list.get(position);
         holder.name.setText(model.getName());
         holder.userName.setText(model.getUserName());
 
@@ -67,7 +66,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.UserViewHo
         public void onClick(View v) {
 
             int position = getAdapterPosition();
-            CustomModel model = list.get(position);
+            UserModel model = list.get(position);
 
             Intent intent = new Intent (context, UserActivity.class);
 
