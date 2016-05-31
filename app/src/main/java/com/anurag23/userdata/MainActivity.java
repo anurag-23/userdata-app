@@ -1,5 +1,6 @@
 package com.anurag23.userdata;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -10,8 +11,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
-
-import com.anurag23.userdata.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -32,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     List<UserModel> userList = new ArrayList <UserModel>();
     CustomAdapter adapter;
     Context context;
+    ProgressDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +48,10 @@ public class MainActivity extends AppCompatActivity {
         adapter = new CustomAdapter(context, userList);
         usersRecyclerView.setAdapter(adapter);
         usersRecyclerView.setLayoutManager(new LinearLayoutManager(context));
+
+        dialog = new ProgressDialog(MainActivity.this);
+        dialog.setMessage("Please Wait...");
+        dialog.show();
 
         new JSONTask().execute("http://jsonplaceholder.typicode.com/users");
     }
@@ -126,8 +130,11 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(Boolean jsonSuccess) {
             super.onPostExecute(jsonSuccess);
 
-            if (jsonSuccess == true)
+            dialog.dismiss();
+
+            if (jsonSuccess == true) {
                 adapter.notifyDataSetChanged();
+            }
             else
                 Toast.makeText(context, "Unable to fetch data!", Toast.LENGTH_LONG).show();
 
@@ -147,7 +154,9 @@ public class MainActivity extends AppCompatActivity {
 
         switch (item.getItemId()){
 
-            case R.id.menu_item:{
+            case R.id.menu_refresh:{
+                dialog.show();
+                userList.clear();
                 new JSONTask().execute("http://jsonplaceholder.typicode.com/users");
                 return true;
             }
