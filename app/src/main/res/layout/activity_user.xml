@@ -7,32 +7,6 @@
     <include layout="@layout/main_toolbar"
         android:id="@+id/second_toolbar" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@color/secondary_color"
-        android:paddingLeft="@dimen/activity_vertical_margin">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="USERNAME: "
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginRight="5dp"/>
-
-    <TextView
-        android:id="@+id/user_username"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="username"
-        android:textSize="18sp"
-        android:textColor="#FFFFFF"
-        />
-
-    </LinearLayout>
 
 
     <ScrollView
@@ -51,13 +25,13 @@
             android:text="E-MAIL:"
             android:textStyle="bold"
             android:textSize="20sp"
-            android:textColor="@color/primary_color"/>
+            android:textColor="@color/primary_text_color"/>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:background="@color/light_primary_color"
-            android:layout_marginBottom="8dp"/>
+            android:background="@color/dark_primary_color"
+            android:layout_marginBottom="5dp"/>
 
         <TextView
             android:id="@+id/user_email"
@@ -66,7 +40,7 @@
             android:text="example@example.com"
             android:textSize="18sp"
             android:layout_marginBottom="10dp"
-            android:textColor="@color/primary_text_color"/>
+            android:textColor="@color/secondary_text_color"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -74,13 +48,13 @@
             android:text="ADDRESS:"
             android:textStyle="bold"
             android:textSize="20sp"
-            android:textColor="@color/primary_color"/>
+            android:textColor="@color/primary_text_color"/>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:background="@color/light_primary_color"
-            android:layout_marginBottom="8dp"/>
+            android:background="@color/dark_primary_color"
+            android:layout_marginBottom="5dp"/>
 
         <TextView
             android:id="@+id/user_a_street"
@@ -88,21 +62,21 @@
             android:layout_height="wrap_content"
             android:text="Street"
             android:textSize="18sp"
-            android:textColor="@color/primary_text_color"/>
+            android:textColor="@color/secondary_text_color"/>
         <TextView
             android:id="@+id/user_a_suite"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Suite"
             android:textSize="18sp"
-            android:textColor="@color/primary_text_color"/>
+            android:textColor="@color/secondary_text_color"/>
         <TextView
             android:id="@+id/user_a_city"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="City"
             android:textSize="18sp"
-            android:textColor="@color/primary_text_color"/>
+            android:textColor="@color/secondary_text_color"/>
         <TextView
             android:id="@+id/user_a_zip"
             android:layout_width="match_parent"
@@ -110,7 +84,7 @@
             android:text="Zipcode"
             android:textSize="18sp"
             android:layout_marginBottom="10dp"
-            android:textColor="@color/primary_text_color"/>
+            android:textColor="@color/secondary_text_color"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -118,13 +92,13 @@
             android:text="PHONE:"
             android:textStyle="bold"
             android:textSize="20dp"
-            android:textColor="@color/primary_color"/>
+            android:textColor="@color/primary_text_color"/>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:background="@color/light_primary_color"
-            android:layout_marginBottom="8dp"/>
+            android:background="@color/dark_primary_color"
+            android:layout_marginBottom="5dp"/>
 
         <TextView
             android:id="@+id/user_phone"
@@ -133,7 +107,7 @@
             android:text="1010101010"
             android:textSize="18sp"
             android:layout_marginBottom="10dp"
-            android:textColor="@color/primary_text_color"/>
+            android:textColor="@color/secondary_text_color"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -141,13 +115,13 @@
             android:text="WEBSITE:"
             android:textStyle="bold"
             android:textSize="20sp"
-            android:textColor="@color/primary_color"/>
+            android:textColor="@color/primary_text_color"/>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:background="@color/light_primary_color"
-            android:layout_marginBottom="8dp"/>
+            android:background="@color/dark_primary_color"
+            android:layout_marginBottom="5dp"/>
 
         <TextView
             android:id="@+id/user_website"
@@ -155,7 +129,7 @@
             android:layout_height="wrap_content"
             android:text="www.example.com"
             android:textSize="18sp"
-            android:textColor="@color/primary_text_color"/>
+            android:textColor="@color/secondary_text_color"/>
 
 
         </LinearLayout>

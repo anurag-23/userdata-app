@@ -20,9 +20,9 @@ public class UserActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar)findViewById(R.id.second_toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(getIntent().getStringExtra("name"));
+        getSupportActionBar().setSubtitle("(" + getIntent().getStringExtra("username") + ")");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        TextView username = (TextView)findViewById(R.id.user_username);
         TextView email = (TextView)findViewById(R.id.user_email);
         TextView aStreet = (TextView)findViewById(R.id.user_a_street);
         TextView aSuite = (TextView)findViewById(R.id.user_a_suite);
@@ -31,7 +31,6 @@ public class UserActivity extends AppCompatActivity {
         TextView phone = (TextView)findViewById(R.id.user_phone);
         TextView website = (TextView)findViewById(R.id.user_website);
 
-        username.setText(getIntent().getStringExtra("username"));
         email.setText(getIntent().getStringExtra("email"));
         aStreet.setText(getIntent().getStringExtra("aStreet"));
         aSuite.setText(getIntent().getStringExtra("aSuite"));
